@@ -1,0 +1,722 @@
+{
+  "Computer Vision": [
+    {
+      "name": "Computer Vision",
+      "concept": "電腦視覺 (Computer Vision, CV) 是一門人工智慧的子領域，旨在使電腦和系統能夠從數位影像、影片或其他視覺輸入中提取有意義的資訊，並基於這些資訊採取行動或提供建議。與人類擁有眼睛與大腦能理解所見事物類似，電腦視覺透過攝影機捕捉影像，並交由深度學習等演算法來解析內容與模式，達到「看見」並「理解」的目的。",
+      "use_cases": [
+        "自動駕駛與輔助駕駛系統 (ADAS)：車輛利用攝影機即時辨識道路標線、行人、車輛與交通號誌，實現自動變換車道或緊急煞車。",
+        "醫療影像分析：協助醫生判讀 X 光片、MRI 或 CT 影像，自動偵測腫瘤或異常病灶，提高早期診斷的準確度。",
+        "工業瑕疵檢測：在智慧製造產線上，透過高速攝影機與電腦視覺自動找出產品表面的刮傷或組裝瑕疵，大幅降低人工品檢成本。"
+      ],
+      "related": [
+        "CNN (卷積神經網路)",
+        "Image Classification (影像分類)",
+        "Object Detection (物件偵測)",
+        "Image Segmentation (影像分割)"
+      ]
+    }
+  ],
+  "Algorithms and Statistics": [
+    {
+      "name": "K-means",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Random Forest",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "PCA",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "KL Divergence",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Linear Regression",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Classification and Regression",
+      "concept": "分類 (Classification) 與迴歸 (Regression) 是監督式學習中最常見的兩大任務類型。兩者的核心差異在於「預測輸出的目標變數類型」：\n- **分類 (Classification)**：目標是預測「離散型的類別標籤」。模型會將輸入資料分配到預先定義好的特定類別中 (例如：是/否、貓/狗/鳥)。\n- **迴歸 (Regression)**：目標是預測「連續型的數值」。模型會根據輸入的特徵計算出一個具體的實數 (例如：價格、溫度、機率)。",
+      "use_cases": [
+        "分類場景：垃圾郵件偵測：將收到的電子郵件標記為「正常信件」或「垃圾信件」。",
+        "分類場景：醫療診斷：根據病患的各項檢測指標，判斷其是否罹患某種疾病 (例如糖尿病的陰性/陽性)。",
+        "迴歸場景：房價預測：根據房屋的坪數、屋齡、地點等特徵，預測該房屋的潛在市場售價 (例如 1500 萬)。",
+        "迴歸場景：股市趨勢或銷量預測：預測未來的連續性數據，如某商品下個月的銷售額。"
+      ],
+      "related": [
+        "Supervised Learning (監督式學習)",
+        "Logistic Regression (羅吉斯迴歸)",
+        "Linear Regression (線性迴歸)",
+        "Decision Tree (決策樹)",
+        "SVM (支持向量機)"
+      ]
+    },
+    {
+      "name": "Pearson Correlation",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Logistic Regression",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "One-hot Encoding",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "SVM",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "XGBoost_LightGBM",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Gradient Descent",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Clustering",
+      "concept": "分群 (Clustering) 是一種「非監督式學習 (Unsupervised Learning)」的演算法。它的主要目的是在「沒有事先標記答案」的情況下，自動發現資料內部的隱藏結構，並根據資料之間的相似性（例如距離的遠近），將資料劃分成若干個不同的群組（Clusters）。同一個群組內的資料具有較高的相似度，而不同群組間的資料則差異較大。",
+      "use_cases": [
+        "客戶市場區隔 (Customer Segmentation)：電商或零售業根據消費者的購買習慣、年齡、消費能力等特徵進行自動分群，進而針對不同群體（如高價值客群、價格敏感客群）推播客製化的行銷活動與商品推薦。",
+        "異常偵測 (Anomaly Detection)：在信用卡交易或工廠設備監測中，將正常行為的數據分群後，如果出現不屬於任何常見群組（或是距離群集中心極遠）的特異數據，即可快速將其標記為可能的盜刷或設備故障異常。",
+        "影像壓縮與特徵萃取：在電腦視覺中，透過對影像中的顏色或像素特徵進行分群（如 K-Means），自動減少影像使用的色彩數量，達到壓縮的效果。"
+      ],
+      "related": [
+        "Unsupervised Learning (非監督式學習)",
+        "K-Means",
+        "Hierarchical Clustering (階層式分群)",
+        "DBSCAN",
+        "Dimensionality Reduction (降維)"
+      ]
+    },
+    {
+      "name": "Supervised_Unsupervised_RL",
+      "concept": "這是機器學習中最重要的三種學習範式，根據「資料是否帶有標籤」與「學習反饋機制」來區分：\n1. **監督式學習 (Supervised Learning)**：使用「有標準答案 (標籤)」的資料來訓練模型，就像老師在旁批改考卷，模型透過不斷修正預測結果和標準答案之間的誤差來學習，主要處理分類與迴歸問題。\n2. **非監督式學習 (Unsupervised Learning)**：使用「沒有特定答案 (無標籤)」的資料來訓練，模型必須自己從資料中找出隱藏的結構或模式，主要用於分群、降維與關聯規則挖掘。\n3. **強化學習 (Reinforcement Learning, RL)**：沒有明確的正確答案，而是讓一個智能體 (Agent) 在環境中進行試錯 (Trial and Error)，藉由獲得「獎勵 (Reward)」或「懲罰 (Penalty)」的訊號，來學習出能獲得最高長期回報的最佳行動策略。",
+      "use_cases": [
+        "監督式學習：銀行用過去有明確違約紀錄的借貸資料，訓練模型來預測新客戶的違約機率；醫院利用人工標記好的腫瘤 X 光片，訓練系統自動判定新的病患照片。",
+        "非監督式學習：交友軟體在尚未知道用戶潛在喜好前，先用演算法將具有相似行為特徵的用戶分為同一群，以便互相推薦；文字探勘中自動發現文件庫中的潛在主題 (Topic Modeling)。",
+        "強化學習 (RL)：AlphaGo 下圍棋、機器狗學習走路與避障、自駕車在虛擬模擬器中不斷試錯來學習如何順暢駕駛，或是投資機器人藉由市場反饋來最佳化股票交易策略。"
+      ],
+      "related": [
+        "Classification (分類)",
+        "Regression (迴歸)",
+        "Clustering (分群)",
+        "Reward Function (獎勵函數)",
+        "Agent (智能體)",
+        "Q-Learning"
+      ]
+    },
+    {
+      "name": "z-score",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Discretization",
+      "concept": "離散化 (Discretization)，也稱為「分箱 (Binning)」或「量化 (Quantization)」，是資料前處理中的一種技術。它的主要目的是將「連續型的數值變數」轉換為「離散型的類別變數 (或區間)」。\n簡單來說，就是將連續變化的數據範圍切分成幾個不同的桶子 (Bins)，將落入範圍內的數據都賦予同一個類別標籤。透過這樣的方式，可以減少資料雜訊的干擾、降低極端值帶來的影響，甚至能讓某些只能處理分類資料的機器學習算法（如決策樹、單純貝氏）能夠使用該特徵。",
+      "use_cases": [
+        "年齡分段處理：在分析消費者行為時，連續的「年齡」可能不太具備明確代表性。透過離散化將其轉換為「青年 (18-30歲)」、「中年 (31-50歲)」、「老年 (51歲以上)」，可能更能捕捉到不同客群間的消費行為差異。",
+        "薪資收入正規化：將使用者的月薪從連續數值，劃分為「低收入」、「中等收入」、「高收入」等區間，可協助信貸模型提升預測穩定性，同時也能大幅降低少數超高薪資所造成的離群值 (Outliers) 干擾。",
+        "影像壓縮顏色量化：將影像中連續的 RGB 像素色彩數值，離散化成較少的色階（例如 256 色轉 16 色），以達成縮小檔案體積的目的。"
+      ],
+      "related": [
+        "Data Preprocessing (資料前處理)",
+        "Binning (分箱技術)",
+        "Feature Engineering (特徵工程)",
+        "Quantization (量化)",
+        "Categorical Variables (類別變數)"
+      ]
+    },
+    {
+      "name": "Decision Tree",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    }
+  ],
+  "Architectures": [
+    {
+      "name": "ReLU",
+      "concept": "ReLU (Rectified Linear Unit，線性整流函數) 是深度學習神經網路中最常使用的非線性「激勵函數 (Activation Function)」。它的數學表達式極為簡單：`f(x) = max(0, x)`。這意味著如果輸入值為負數，ReLU 就會輸出 0；如果輸入值為正數，ReLU 就會直接輸出該數值。\n相較於早期的 Sigmoid 或是 Tanh 激勵函數，ReLU 有著計算速度極快、容易收斂且不易發生「梯度消失 (Vanishing Gradient)」問題的巨大優勢，是讓深層神經網路能夠成功訓練的關鍵技術之一。",
+      "use_cases": [
+        "卷積神經網路 (CNN) 中的特徵提取：在影像辨識的 CNN 模型（如 ResNet, VGG）中，經過卷積層萃取出的特徵通常會直接進入 ReLU 層，把負數過濾為 0，藉此保留對影像最重要的正向邊緣或輪廓特徵。",
+        "防止梯度消失的深層網路訓練：當訓練幾十層甚至上百層的深層神經網路時，ReLU 能確保傳遞的梯度不會在反向傳播中變得微乎其微，從而成功訓練出極深的網路結構。"
+      ],
+      "related": [
+        "Activation Function (激勵函數)",
+        "Vanishing Gradient (梯度消失問題)",
+        "CNN (卷積神經網路)",
+        "Leaky ReLU",
+        "Sigmoid"
+      ]
+    },
+    {
+      "name": "Transformer",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Model Parameters",
+      "concept": "模型參數 (Model Parameters) 是機器學習模型中「可透過訓練資料自動學習並更新的內部變數」。最常見的模型參數包含：神經網路連線上的「權重 (Weights)」和各節點的「偏差值/偏置 (Biases)」。\n可以把模型想像成一個巨大的數學公式函數，而這些參數就是決定公式具體樣貌的神秘數字。在訓練過程中，模型會不斷調整這些參數，以縮小預測結果和標準答案之間的誤差 (Loss)。因此，模型的「參數數量」往往代表了該模型的複雜度與學習能力。",
+      "use_cases": [
+        "大型語言模型 (LLM) 的規模指標：我們常聽到的 Llama-7B, GPT-3 的 175B，裡面的 B 指的就是 Billion (十億)。7B 代表這個模型內部有 70 億個訓練好的參數。參數越多，模型儲存的世界知識和語言理解能力通常越強。",
+        "權重遷移與微調 (Fine-Tuning)：當我們使用預訓練模型 (Pre-trained Model) 進行遷移學習時，我們實際上是在下載這數億個已經訓練好的最佳「模型參數」，並在大規模數據基礎上稍微修改少數幾層參數以適應我們特定的新任務。"
+      ],
+      "related": [
+        "Weights (權重)",
+        "Biases (偏差)",
+        "Hyperparameters (超參數)",
+        "Pre-trained Model (預訓練模型)",
+        "Fine-Tuning (微調)"
+      ]
+    },
+    {
+      "name": "VAE",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "RNN",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Vanishing Gradient",
+      "concept": "梯度消失 (Vanishing Gradient Problem) 是在訓練「很深」的神經網路（例如多層感知機 MLP 或早期的 RNN）時容易遇到的致命問題。\n在訓練神經網路時，常使用「反向傳播演算法 (Backpropagation)」搭配連鎖律 (Chain Rule) 從最後一層往前更新每一層的權重。當網路層數太多，且使用的激勵函數（如 Sigmoid 或 Tanh）其導數值皆小於 1 時，這些小於 1 的數值在不斷相乘的過程中會變得越來越靠近 0。最終導致傳回最初幾層的梯度（也就是更新參數的方向與力度）趨近於零，這會讓最前面的神經層「幾乎停止學習變更」，導致整個模型無法有效訓練。",
+      "use_cases": [
+        "深度卷積神經網路 (CNN) 架構選擇：為了避免在訓練幾十層以上的影像分類網路發生梯度消失，現代模型捨棄了 Sigmoid，改用 ReLU 作為隱藏層的激勵函數（因其導數為 1），或是引入如同 ResNet 中的「殘差連接 (Residual Connection)」，直接將梯度跨層傳遞。",
+        "解決自然語言處理中長序列的遺忘問題：傳統 RNN 遇到長文章時，因梯度消失很容易忘記前文的線索。為了解決這個問題，後來的研究發展出了 LSTM (長短期記憶神經網路) 或 Transformer 等架構來保留長距離的記憶與梯度。"
+      ],
+      "related": [
+        "Backpropagation (反向傳播)",
+        "Deep Learning (深度學習)",
+        "ReLU",
+        "ResNet (殘差網路)",
+        "Exploding Gradient (梯度爆炸)"
+      ]
+    },
+    {
+      "name": "HMM",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Deep Learning",
+      "concept": "深度學習 (Deep Learning) 是機器學習 (Machine Learning) 的一個分支，其靈感來自人類大腦中神經元互相連結的結構，主要由一種被稱為「人工神經網路 (Artificial Neural Networks, ANN)」的模型所組成。\n所謂「深層 (Deep)」，指的是該模型擁有許多隱藏層 (Hidden Layers)。傳統機器學習通常依賴人類工程師手工設計特徵 (Feature Engineering) 給模型；而深度學習具備「自動特徵萃取 (Feature Extraction)」的能力，能夠透過一層又一層的神經網路，從原始資料（例如像素、文字字元、音訊波形）中層層堆疊出越來越高階、抽象的特徵。",
+      "use_cases": [
+        "電腦視覺 (Computer Vision)：使用深度神經網路（如 CNN 卷積神經網路）來精準進行人臉辨識、車牌辨識、腫瘤影像醫學檢測以及自動駕駛車輛的環境感知。",
+        "自然語言處理 (NLP) 與生成式AI：Siri、Alexa 語音助理的語音識別，以及 ChatGPT、Gemini 等大型語言模型背後的 Transformer 基礎架構，都是深度學習在語言文字處理上的巨大成就。",
+        "複雜推薦系統：Netflix、YouTube 等平台利用深層神經網路模型預測使用者可能喜歡的下一部影片，進而最大化用戶的觀看時長與黏著度。"
+      ],
+      "related": [
+        "Artificial Neural Network (人工神經網路)",
+        "Machine Learning (機器學習)",
+        "Backpropagation (反向傳播)",
+        "CNN (卷積神經網路)",
+        "Transformer"
+      ]
+    },
+    {
+      "name": "GPT",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "GRU",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Autoregressive Model",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "LSTM",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "BERT",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Diffusion Model",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "ELMo",
+      "concept": "ELMo (Embeddings from Language Models) 是一種創新的自然語言處理 (NLP) 模型架構，由 AllenAI 在 2018 年提出。它的出現解決了傳統詞向量（如 Word2Vec 或 GloVe）中「一詞多義」無法區分的問題。\n傳統詞向量只會給每個單字一個固定的向量表示，不管這個字出現在什麼前後文中。而 ELMo 導入了「上下文感知 (Contextualized)」的概念，它利用深層的雙向長短期記憶網路 (Bi-LSTM) 來檢視整個句子，然後為裡面每個單字產生動態的向量表示。也就是說，句子中同一個單字（如 Bank，銀行/河岸）的意思，會根據它相鄰上下文的不同，而擁有一組完全不一樣的向量。",
+      "use_cases": [
+        "解決同音異義/一詞多義問題：我們在處理英文句子 \"I went to the bank to deposit money\"和 \"I sat on the river bank\"，ELMo 會因為上下文的不同，自動為這兩個 bank 提供不同語義的向量，大幅提高機器的理解精準度。",
+        "提升下游 NLP 任務的效能：無論是進行問答系統、機器翻譯或是情感分析，只要將傳統的靜態詞向量替換成 ELMo 訓練出來的動態上下文詞向量，通常都能非常顯著地提高模型的整體準確度與效能。"
+      ],
+      "related": [
+        "Contextualized Word Embeddings",
+        "Bi-LSTM (雙向長短期記憶網路)",
+        "Word2Vec",
+        "BERT",
+        "NLP (自然語言處理)"
+      ]
+    },
+    {
+      "name": "GAN",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Pooling",
+      "concept": "池化 (Pooling)，有時也稱為子採樣 (Subsampling)，是卷積神經網路 (CNN) 裡非常重要的一個步驟。它通常會緊接在「卷積層 (Convolutional Layer)」之後。\n池化層的最主要目的是「降維」和「特徵降頻」，也就是縮小影像長寬的尺寸，同時保留下最重要的特徵資訊。當視野區塊掃過圖片時，最常見的做法是「最大池化 (Max Pooling)」，它會從一個特定小區塊（例如 2x2 像素）中，挑選一個最大數值作為代表輸出；或是「平均池化 (Average Pooling)」，代表該區塊資訊的平均值。這不僅能大幅減少往後傳遞的模型運算量，更能賦予模型對圖片平移、稍微變形的「空間不變性 (Spatial Invariance)」。",
+      "use_cases": [
+        "車辨系統中的車牌定位：當一張高解析度的街景圖片通過卷積核萃取出無數個車牌輪廓特徵後，加入池化層可以快速將這張大照片縮小，但仍然「記住車牌特徵」大約出現在圖片的哪個相對位置，這樣模型不需要學習超級鉅量的像素即能完成辨識。",
+        "預防神經網路過擬合 (Overfitting)：由於池化層不具備任何會被訓練變動的參數，它單純只是強制壓縮並提煉出最明顯的特徵輪廓（例如垂直或水平邊緣）。如此可以大幅減少神經網路的權重參數數量，有效防止模型去死背微小的雜訊而過度擬合。"
+      ],
+      "related": [
+        "CNN (卷積神經網路)",
+        "Max Pooling (最大池化)",
+        "Feature Extraction (特徵提取)",
+        "Dimensionality Reduction (降維)",
+        "Stride (步幅)"
+      ]
+    },
+    {
+      "name": "Elman Network",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "CNN",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    }
+  ],
+  "NLP": [
+    {
+      "name": "NLU",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "n-gram",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Text Preprocessing",
+      "concept": "文本前處理 (Text Preprocessing) 是自然語言處理 (NLP) 模型在讀取人類語言前必經的「資料清理與標準化」步驟。電腦沒辦法直接讀懂文字，它只能處理數字。因此，需要將雜亂無章的自然語言文字清理乾淨，為後續的辭典建立與文字向量化做準備。\n常見的前處理技巧包含：去除標點符號與特殊字元、統一大小寫 (Lowercasing)、斷詞 (Tokenization)、去除無意義的停用詞 (Stop Words，如的、了、is、the)、以及將單字還原為基本型態的詞幹擷取 (Stemming) 或詞形還原 (Lemmatization)。",
+      "use_cases": [
+        "搜尋引擎最佳化與資訊檢索：當使用者搜尋 \"Runned quickly\" 時，文字前處理能將它轉換成原型 \"run\" 和 \"quick\"，進而去資料庫比對出最相關的文章，而不會因為時態或副詞的些微差異找不到結果。",
+        "情緒分析 (Sentiment Analysis)：在分析大量的 Twitter 或論壇貼文來判斷消費者對新手機的評價時，前處理會優先幫忙濾掉無關緊要的網址、表情符號與標點符號，保留像是 \"good\", \"terrible\" 等有意義的字眼。"
+      ],
+      "related": [
+        "Tokenization (斷詞/分詞)",
+        "Stop Words (停用詞)",
+        "Stemming (詞幹擷取)",
+        "Lemmatization (詞形還原)",
+        "NLP (自然語言處理)"
+      ]
+    },
+    {
+      "name": "Attention Mechanism",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "NLP Overview",
+      "concept": "自然語言處理 (Natural Language Processing, NLP) 是一門結合電腦科學、人工智慧與語言學的跨領域學科。其終極目標是讓電腦能夠「讀懂、理解並生成」人類使用的自然語言（包含文字與語音）。\nNLP 是人工智慧走向通用化的關鍵，因為人類擁有全世界最豐富的知識庫都是用文字儲存的。NLP 包含了語言的表層結構分析（如斷詞、詞性標註）到深層語意理解（如推論、情感分析與問答），並隨著近年神經網路與大型語言模型的演進，取得了驚人的突破進展。",
+      "use_cases": [
+        "機器翻譯 (Machine Translation)：如 Google 翻譯，能快速、流暢地將長篇大論的英文新聞稿自動翻譯成中文或其他數百種語言。",
+        "虛擬助理與對話機器人：像 Apple Siri 或各大電服中心的客服機器人，能夠聽懂使用者的自然口語提問，從而自動幫忙訂位、查詢天氣或回答常見問題。",
+        "自動摘要 (Text Summarization)：自動將上萬字的會議記錄或長篇財經報告，濃縮提煉成只有三五百字的精華摘要，幫助讀者快速掌握重點。"
+      ],
+      "related": [
+        "Text Preprocessing (文本前處理)",
+        "LLM (大型語言模型)",
+        "Machine Translation (機器翻譯)",
+        "Speech Recognition (語音辨識)",
+        "Sentiment Analysis (情感分析)"
+      ]
+    },
+    {
+      "name": "NLG",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "POS Tagging",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Multi-Head Self-Attention",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Lemmatization",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Stemming",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Stopword Removal",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    }
+  ],
+  "Eval Ops and Compliance": [
+    {
+      "name": "ROUGE_METEOR",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "SLA",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Confusion Matrix",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Audit Log",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Benchmark",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Zero Trust",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Metadata",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Data Drift",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "MaaS",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "ETL",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "MMLU",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "MLOps_LLMOps",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "CRM",
+      "concept": "客戶關係管理 (Customer Relationship Management, CRM) 是一種廣泛的策略和技術系統，用來管理企業與「現有客戶及潛在客戶」之間的所有互動與關係。\n雖然 CRM 本身是商業名詞，但現代 CRM 系統已深度整合了 AI 技術。透過收集用戶從首次接觸、購買、到售後服務的各種數據，AI 得以在 CRM 中進行各種預測分析（如顧客流失預測），幫助企業提升銷售量、改善客戶服務體驗，並最終提高客戶的忠誠度與終身價值 (LTV)。",
+      "use_cases": [
+        "銷售自動化與潛在客戶評分 (Lead Scoring)：知名的 Salesforce 提供 AI 功能，能自動分析哪位潛在客戶的回信頻率最高、網頁停留最久，進而幫業務員排列優先聯絡的順序。",
+        "個人化行銷推播：電商平台的 CRM 知道用戶 A 每個月都會買寵物飼料，AI 系統便會在特定週期自動寄出包含折價券的個人化提醒信件，提高回購率。",
+        "客戶流失預測 (Churn Prediction)：電信公司的 CRM 系統若偵測到某位老客戶最近頻繁打電話到客服抱怨網路不穩，AI 會自動發出可能流失的警告，讓客服主管盡早介入挽留。"
+      ],
+      "related": [
+        "Churn Prediction (客戶流失預測)",
+        "Lead Scoring (潛在客戶評分)",
+        "Personalization (個人化推薦)",
+        "Customer Lifetime Value (客戶終身價值)"
+      ]
+    },
+    {
+      "name": "GDPR",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    }
+  ],
+  "Infrastructure": [
+    {
+      "name": "TPU",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "GPU",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "NPU",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    }
+  ],
+  "GenAI and LLM": [
+    {
+      "name": "Retrieval",
+      "concept": "資訊檢索 (Retrieval) 最初是指從龐大的資料庫或文件中，根據使用者的關鍵字查詢，找出最相關資料的過程（例如早期的 Google 搜尋）。\n在近年的生成式 AI 領域，這個概念被進一步升級，尤其是在「檢索增強生成 (Retrieval-Augmented Generation, RAG)」技術中。它的運作就像是考試前的大抄：當語言模型被問到一個不知道或需要最新資訊的問題時，系統會先透過「檢索 (Retrieval)」技術去外部資料庫（例如公司的內部文件庫或維基百科）把相關段落找出來，然後把這些找到的文章「餵給」語言模型，讓它根據這些正確的參考資料來產生答案，從而減少 AI 的幻覺 (Hallucination)。",
+      "use_cases": [
+        "企業內部知識庫問答 (RAG 系統)：當新進員工詢問「公司的請假規定是什麼？」，AI 會先「檢索」出最新的員工手冊 PDF，再依據手冊內容整理成白話文回答，避免 AI 瞎掰錯誤的規定。",
+        "具備網路搜尋功能的 AI 助理：如果使用者詢問「今天台北的天氣如何？」，AI 無法預測未來，所以會立刻呼叫搜尋引擎進行「網頁檢索」，獲得最新的氣象局資料後再回覆。"
+      ],
+      "related": [
+        "RAG (檢索增強生成)",
+        "Vector Database (向量資料庫)",
+        "Semantic Search (語義搜尋)",
+        "Information Retrieval (資訊檢索)"
+      ]
+    },
+    {
+      "name": "LRM",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "RAG",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "KAG",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "LLM Overview",
+      "concept": "大型語言模型 (Large Language Models, LLM) 是近年人工智慧最具突破性的發展，屬於生成式 AI 的核心基礎。它是一種規模極度龐大的深度學習模型（通常具備數十億到數千億個參數，並建立在 Transformer 架構之上），透過閱讀和學習網際網路上近乎全人類的海量文字資料庫來進行訓練。\nLLM 的核心運作原理其實非常單純——它在做「文字接龍」。根據你輸入的提示詞 (Prompt)，它可以非常精準地計算並預測出下一個最合理的單字是什麼。因為訓練資料包羅萬象，這使得它看起來像是具備了類似人類的「理解能力」與「常識」，可以幫忙寫程式、寫文章、翻譯甚至進行邏輯推理。",
+      "use_cases": [
+        "萬能虛擬助手：如 ChatGPT、Claude 等對話式 AI，能回答你在生活中遇到的百般雜項問題，從幫小學生解數學題，到幫忙規劃五天四夜的日本東京自由行行程。",
+        "程式碼輔助開發 (Copilot)：軟體工程師只需要寫下一句註解 \"寫一個能連接資料庫並抓取用戶資料的 Python 函數\"，LLM 就能在幾秒內自動把整段完整的後端程式碼寫出來。",
+        "自動化客服與客製信件：企業將 LLM 整合到網站客服中，用非常禮貌且專業的口吻應對客人的退換貨請求，並且不會像傳統罐頭訊息那般死板。"
+      ],
+      "related": [
+        "Generative AI (生成式AI)",
+        "Transformer",
+        "Prompt Engineering (提示工程)",
+        "Pre-training (預訓練)",
+        "Fine-Tuning (微調)",
+        "RAG"
+      ]
+    },
+    {
+      "name": "Word2Vec_GloVe_FastText",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Generative AI",
+      "concept": "生成式 AI (Generative AI) 是一種能產出全新內容（例如文字、圖片、音樂、影片或程式碼）的人工智慧系統。傳統 AI 主要側重於「分析與預測」（像是預測房價、辨識圖片裡是不是貓），而生成式 AI 的重點在於「創造」。\n這類模型（如 LLM 或擴散模型 Diffusion Model）透過學習龐大資料庫中既有的語法結構、視覺風格或藝術規律，能夠在你給予提示詞 (Prompt) 之後，重新組織並「生成」出世界上原本不存在的全新作品，就像是一位擁有多種才華的虛擬創作者。",
+      "use_cases": [
+        "自動化圖像與設計生成：使用 Midjourney 或 DALL-E 3，設計師只需輸入 \"一隻戴著墨鏡在太空吃熱狗的柴犬，賽博龐克風格\"，AI 就能在幾秒內產生四張專業級的高解析度插畫，大幅縮短設計草圖的時間。",
+        "文案內容創作：行銷人員利用 ChatGPT 來快速產出 10 個不同的廣告文宣標題、SEO 優化文章或是引人入勝的社群貼文，突破靈感瓶頸。",
+        "影音與音樂製作：Sora 能根據文字產生數十秒長度且符合物理規律的高畫質影片；Suno 等音樂 AI 則能幫你作詞作曲，直接生成一首完整的流行歌曲。"
+      ],
+      "related": [
+        "LLM (大型語言模型)",
+        "Diffusion Model (擴散模型)",
+        "Prompt Engineering (提示工程)",
+        "Zero-Shot Learning",
+        "Hallucination (幻覺)"
+      ]
+    },
+    {
+      "name": "LoRA",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Open vs Closed Source",
+      "concept": "在 AI 模型（特別是 LLM 大型語言模型）領域中，分成開源 (Open Source) 與閉源 (Closed Source/Proprietary) 兩大陣營。\n- **開源模型 (Open Source)**：開發機構會將模型訓練好的權重參數 (Weights) 或程式碼公開，供全世界免費下載。開發者可以將模型部署在自己的電腦或企業私有伺服器上，甚至為了特定目的進行微調 (Fine-Tuning)。代表性的如 Meta 的 **Llama**, Google 的 **Gemma**, 法國的 **Mistral**。\n- **閉源模型 (Closed Source)**：模型代碼與內部權重是被公司封鎖保密的。一般人無法把模型下載回家，只能透過他們提供的 API 或是網頁介面 (如 ChatGPT 網頁版) 並且付費來使用它強大的運算與推理能力。代表性的如 OpenAI 的 **GPT-4**, Anthropic 的 **Claude 3**, Google 的 **Gemini 1.5 Pro**。",
+      "use_cases": [
+        "選擇開源情境 - 高度機密醫療病歷資料：某醫院希望引進 AI 幫忙整理病歷，但法規嚴格禁止病患資料上傳至第三方雲端伺服器。此時醫院就必須選擇下載「開源模型（如 Llama）」，部署在沒有連外網的內部伺服器運行，確保資料絕對安全。",
+        "選擇閉源情境 - 追求極致的邏輯推演或編程：如果一間新創公司想要開發一個無所不能的全自動化程式編寫助理助理，因為不需要保密自家資料，它會直接串接「閉源模型 API（如 GPT-4 或 Claude 3.5 Sonnet）」，利用地球上目前推論能力最強的模型來確保產品卓越的品質，把底層重擔交給大科技公司去維護。"
+      ],
+      "related": [
+        "Llama",
+        "GPT-4",
+        "Fine-Tuning (微調)",
+        "Self-Hosting (自託管)",
+        "API (應用程式介面)"
+      ]
+    },
+    {
+      "name": "Embedding",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Pre-training",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "CAG",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Contextualized Word Embeddings",
+      "concept": "上下文文字嵌入 (Contextualized Word Embeddings) 是現代自然語言處理（NLP）的一項核心突破。傳統的詞向量技術（像 Word2Vec）是靜態的，每個字在字典裡只有一個固定的向量數學值。這遇到「同音異義字」就會出錯，因為不管是哪種意思，它都會給出相同的數字。\n相反的，Contextualized Word Embeddings 會像人類閱讀一樣，先看完這個單字「前後發生了什麼事」，然後動態地賦予它向量。例如句子中出現 \"Apple\"，如果前面的字是 \"Steve Jobs\"，它就會產生代表科技公司的向量；如果前面的字是 \"eat a delicious\"，它就會產生代表水果的向量。因為這種動態轉換，模型才真正擁有了理解複雜「語義」的能力。",
+      "use_cases": [
+        "多義詞消歧義 (Word Sense Disambiguation)：當客戶留言說「你們銀行的服務就像對岸的河岸一樣荒涼」時，\"銀行 (Bank)\" 與 \"河岸 (Bank)\" 在英文裡皆為同字，但在 BERT 這樣的模型眼中，它們的向量表示將截然不同，不會被混淆，情緒分析的結果也會更加精確。",
+        "強大的閱讀理解問答系統：正因為能夠根據整句話理解單字的細微差異，導入了這項技術的模型，在閱讀一整篇文章後，能像人類一樣準確回答關於文章內容的刁鑽提問，是目前所有強大 LLM 的基礎。"
+      ],
+      "related": [
+        "Word Embeddings (詞向量)",
+        "ELMo",
+        "BERT",
+        "Transformer",
+        "Word2Vec"
+      ]
+    },
+    {
+      "name": "Chunking",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Fine-tuning",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Tokenization",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Prompt Engineering",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Model Sizes (7B, 70B)",
+      "concept": "在討論大型語言模型 (LLM) 時，常常會看到名稱後面跟著「7B」、「70B」甚至「405B」的後綴。這裡的「B」代表的是十億 (Billion)，而前方的數字則是指該模型內部包含的「參數數量 (Parameters Number)」。\n參數數量就像是大腦中的神經元突觸連結數量，它是衡量模型複雜度、儲存知識容量以及邏輯推理能力的重要指標。\n- **7B 到 8B 級距 (小模型)**：相當於 70 億到 80 億個參數。這類模型雖然體積小，但是在單一特定任務上表現不錯，而且佔用的記憶體 (VRAM) 較少，一般家用高階顯卡或是手機端點都跑得動。\n- **70B 以上級距 (大模型)**：相當於 700 億甚至幾千億個參數。這類模型具備極強的世界常識、多語言翻譯能力、複雜邏輯推導以及編寫程式的能力，但缺點是需要動用多張高昂的資料中心等級 GPU (如 A100/H100) 才能運行。",
+      "use_cases": [
+        "邊緣運算與成本敏感型服務：一家企業想要在客服系統部署自動回覆 AI，為了節省雲端長期的運算開銷和提高回覆速度，選擇了 Llama-3-8B（80億參數），這樣只要一台普通的伺服器就能滿足全天的需求。",
+        "超級大腦與全能助理：研究機構需要一個能讀懂數學論文並且幫忙找 BUG 的 AI，他們會毫不猶豫選擇 70B 甚至 400B 規模以上的模型，這時需要龐大的算力資源，但能換來媲美頂尖專家的推理建議。"
+      ],
+      "related": [
+        "Model Parameters (模型參數)",
+        "LLM (大型語言模型)",
+        "VRAM (顯示記憶體)",
+        "Quantization (模型量化)",
+        "Inference (推論)"
+      ]
+    },
+    {
+      "name": "Temperature",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Top-K_Top-P Sampling",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    },
+    {
+      "name": "Multimodal",
+      "concept": "目前尚無解釋",
+      "use_cases": [],
+      "related": []
+    }
+  ]
+}
