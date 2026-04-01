@@ -19,33 +19,68 @@
   "Algorithms and Statistics": [
     {
       "name": "K-means",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "K-means 是一種非監督式學習中的群聚演算法，目標是將未標記的資料分為 K 個不同的群集 (Clusters)。演算法隨機選擇 K 個初始中心點，接著反覆進行兩個步驟：將每個資料點分配給距離最近的群集中心，以及重新計算所有被分配資料點的平均值作為新的中心，直到群集中心不再變動為止。",
+      "use_cases": [
+        "常用於客戶特徵分群 (Customer Segmentation)、市場區隔，以及影像壓縮等場景。例如：電商平台根據顧客過往的購買頻率與消費金額自動分群，然後針對各群推播專屬行銷方案。"
+      ],
+      "related": [
+        "Clustering",
+        "Euclidean Distance",
+        "Unsupervised Learning",
+        "Elbow Method"
+      ]
     },
     {
       "name": "Random Forest",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "隨機森林 (Random Forest) 是一個基於決策樹的整合學習 (Ensemble Learning) 模型。它結合了多棵獨立決策樹的預測結果來進行最終決策（分類採多數決，迴歸採平均值）。它的核心在於引入「隨機性」：隨機抽取訓練資料 (Bagging) 以及在分裂節點時隨機選擇部分特徵，從而降低模型的變異數並避免過擬合。",
+      "use_cases": [
+        "常用於金融風控的信用評分、醫療診斷系統、或是電子商務的商品推薦。例如：銀行會利用客戶的過往信用紀錄、收入等多重歷史特徵，丟入隨機森林中快速預測是否核發信用卡。"
+      ],
+      "related": [
+        "Decision Tree",
+        "Ensemble Learning",
+        "Bagging",
+        "Overfitting"
+      ]
     },
     {
       "name": "PCA",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "主成分分析 (Principal Component Analysis, PCA) 是一種降維 (Dimensionality Reduction) 技術。它透過正交轉換，將可能具相關性的高維度變數，轉換成一組線性不相關的低維度變數，稱為「主成分」。目的是在盡可能保留原始資料變異量 (Variance) 的前提下，減少特徵數量，以節省運算資源並去除雜訊。",
+      "use_cases": [
+        "經常在資料前處理步驟使用，或者是為了資料視覺化（將百維資料降至 2D 或 3D 後作圖）。例如：處理高解析度影像特徵提取時，先透過 PCA 大幅壓縮影像維度，過濾無用特徵。"
+      ],
+      "related": [
+        "Dimensionality Reduction",
+        "Eigenvalue",
+        "Eigenvector",
+        "Feature Extraction"
+      ]
     },
     {
       "name": "KL Divergence",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "Kullback-Leibler Divergence (KL散度，又稱相對熵) 是用來衡量兩個機率分佈 (通常一個是真實分佈 P，一個是預測或近似分佈 Q) 之間差異的非對稱指標。當兩個分佈完全相同時，KL散度為 0；差別越大，數值越高。",
+      "use_cases": [
+        "在生成式 AI 與神經網路中，常被當作損失函數來最佳化模型，像是 VAE (變分自編碼器) 就利用 KL散度來確保隱空間分佈接近標準常態分佈。也可用於衡量自然語言模型中預測字詞機率分佈的誤差。"
+      ],
+      "related": [
+        "Cross Entropy",
+        "Information Theory",
+        "VAE",
+        "Probability Distribution"
+      ]
     },
     {
       "name": "Linear Regression",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "線性迴歸 (Linear Regression) 是一種監督式學習演算法，用於尋找自變數 (X) 與連續型應變數 (Y) 之間最佳的線性關係。演算法透過最小化「預測值與實際觀察值之間的誤差平方和 (MSE)」來找出一條最佳擬合的直線。",
+      "use_cases": [
+        "廣泛運用在趨勢預測。比如房地產界可使用坪數、距離市中心的距離做為自變數，預測房屋的成交價格；或用於銷售額的長期趨勢預測。"
+      ],
+      "related": [
+        "Supervised Learning",
+        "MSE (Mean Squared Error)",
+        "Gradient Descent",
+        "Regression"
+      ]
     },
     {
       "name": "Classification and Regression",
@@ -66,39 +101,81 @@
     },
     {
       "name": "Pearson Correlation",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "皮爾森積差相關係數 (Pearson Correlation Coefficient, 通常以 r 表示) 是一種用來衡量兩個連續變數之間線性相關程度的統計指標。它的值介於 -1 到 1 之間：1 代表完全正相關，-1 代表完全負相關，0 則代表無線性相關。",
+      "use_cases": [
+        "探索性資料分析 (EDA) 時最常使用，幫助我們找出特徵與標籤之間的緊密關係。例如：在預測股票漲跌前，先去判斷各種財經指標 (如大盤走勢、外資買賣超) 與該股票價格的皮爾森相關係數以決定特徵重要性。"
+      ],
+      "related": [
+        "Correlation",
+        "Covariance",
+        "Spearman Correlation",
+        "EDA"
+      ]
     },
     {
       "name": "Logistic Regression",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "羅吉斯迴歸 (Logistic Regression) 雖然名字有「迴歸」，但它實際上是一種分類演算法 (通常用於二元分類)。它將線性迴歸的輸出結果通過 Sigmoid 壓縮函數，將數值轉換成 0 到 1 之間的機率值，大於特定閾值 (如 0.5) 則判斷為正類，否則為負類。",
+      "use_cases": [
+        "被廣泛用於預測「發生或不發生」的二分法情境。最經典的應用為電子信箱的垃圾郵件分類、醫療檢測(如預測腫瘤是惡性還是良性)以及預測會員是否會流失。"
+      ],
+      "related": [
+        "Classification",
+        "Sigmoid Function",
+        "Binary Classification",
+        "Cross Entropy"
+      ]
     },
     {
       "name": "One-hot Encoding",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "獨熱編碼 (One-hot Encoding) 是一種將類別型資料 (Categorical Data) 轉換成機器學習模型能處理的數值型式技術。它會將原本的 N 種分類變成 N 個獨立的二進制特徵欄位，除了對應真實類別的欄位會標記為 1 之外，其餘全標記為 0，避免演算法被類別編號的數字大小所誤導。(例如處理顏色:紅/藍/綠)",
+      "use_cases": [
+        "當資料集中存在如「語言」、「城市」、「職業」這類沒有大小順序關係的名目資料時，送進神經網路或線性模型前都會先進行 One-hot Encoding 前處理。"
+      ],
+      "related": [
+        "Feature Engineering",
+        "Label Encoding",
+        "Dummy Variable",
+        "Categorical Data"
+      ]
     },
     {
       "name": "SVM",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "支持向量機 (Support Vector Machine, SVM) 是一種強大的監督式學習演算法，常用於分類。(概念上) 它的目標是尋找一個能將不同類別資料分開的最優超平面 (Hyperplane)，且使得該平面距離兩邊分類的最靠近資料點 (即支持向量 Support Vectors) 最大化 (最大化 Margin)。如果資料在低維度不可分，SVM 能透過核函數 (Kernel Trick) 投射到高維度空間來做分類。",
+      "use_cases": [
+        "特別適合用於高維度且樣本數相對不大的資料集。早期在影像辨識、文字分類與生物資訊學 (如基因分類) 都有非常卓越的表現。"
+      ],
+      "related": [
+        "Margin",
+        "Supervised Learning",
+        "Kernel Trick",
+        "Hyperplane"
+      ]
     },
     {
       "name": "XGBoost_LightGBM",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "XGBoost 與 LightGBM 都是基於梯度提升決策樹 (Gradient Boosting Decision Tree, GBDT) 架構的高效能開源演算法。它們的原理是透過不斷地建立新的決策樹來擬合上一棵樹的殘差 (Residuals)，最終將所有決策樹的結果加權組合起來。XGBoost 以極致的系統優化著名；LightGBM 則利用直方圖算法與葉子生長策略，在保持準確率的同時達到極快的訓練速度。",
+      "use_cases": [
+        "可以說是處理「表格型資料 (Tabular Data)」的神器。目前在 Kaggle 等各大資料科學競賽上幾乎是必備的首選方案，用於銷售預測、點擊率(CTR)預估、推薦系統等挑戰。"
+      ],
+      "related": [
+        "Ensemble Learning",
+        "Gradient Boosting",
+        "Decision Tree",
+        "Tabular Data"
+      ]
     },
     {
       "name": "Gradient Descent",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "梯度下降法 (Gradient Descent) 是機器學習與深度學習中最核心的最佳化演算法之一。它的目標是尋找損失函數 (Loss Function) 的區域最小值。運作原理是在每一次迭代時，計算當下參數所在位置的「梯度 (斜率)」，然後沿著梯度的反方向，乘上學習率 (Learning Rate) 更新參數，一步步逼近最低點。",
+      "use_cases": [
+        "訓練類神經網路的底層驅動力。所有你看到的深度學習模型（包含 ChatGPT 背後的 GPT 模型），在訓練時都是依靠梯度下降 (及其變形如 Adam、SGD) 來調整網路上億個權重參數。"
+      ],
+      "related": [
+        "Optimization",
+        "Learning Rate",
+        "Loss Function",
+        "Backpropagation"
+      ]
     },
     {
       "name": "Clustering",
@@ -135,9 +212,16 @@
     },
     {
       "name": "z-score",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "Z 分數 (z-score 或者 Standard Score) 是一項統計量測數值，用來表示一個資料點距離其平均值有多少個標準差。當資料呈現常態分佈時，z-score 可以協助我們將不同單位的資料給「標準化 (Standardization)」到平均值為 0，標準差為 1 的分佈上，使不同特徵尺度有可比性。",
+      "use_cases": [
+        "主要用於機器學習的特徵縮放 (Feature Scaling) 前處理，以及偵測異常值 (Outliers) ── 若某資料點的 Z 分數大於 3 或小於 -3，往往被視為極端的異常情況。"
+      ],
+      "related": [
+        "Standardization",
+        "Normal Distribution",
+        "Outliers",
+        "Feature Scaling"
+      ]
     },
     {
       "name": "Discretization",
@@ -157,9 +241,16 @@
     },
     {
       "name": "Decision Tree",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "決策樹 (Decision Tree) 是一種監督式學習演算法，外觀如同一棵倒置的樹形結構。它藉由計算資訊增益 (Information Gain) 或 Gini 不純度等指標，在每一個節點上挑選最具區分能力的特徵來切割資料集，直到最後的葉節點得出預測分類結果或數值。它的過程完全可視化且解釋性極高。",
+      "use_cases": [
+        "經常應用在醫療輔助診斷，因為醫生需要明確的推理軌跡；或者是企業內部的人事決策、客戶流失判定等需要向非理工背景主管解釋模型判斷邏輯的情境。"
+      ],
+      "related": [
+        "Information Gain",
+        "Gini Impurity",
+        "Overfitting",
+        "Random Forest"
+      ]
     }
   ],
   "Architectures": [
@@ -180,9 +271,16 @@
     },
     {
       "name": "Transformer",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "Transformer 是由 Google 於 2017 年提出的革命性神經網路架構，徹底改變了 NLP 領域的發展。它摒棄了傳統 RNN/LSTM 必須循序漸進處理序列資料的限制，轉而完全基於「自注意力機制 (Self-Attention)」來捕捉字詞間的全域關聯性。因此，它能實現高度平行化運算，大幅加速模型訓練，為巨型的現代語言模型奠定了基礎。",
+      "use_cases": [
+        "幾乎是現代所有主流生成式 AI 語言模型（包含 ChatGPT、BERT、T5）的最底層基礎架構。任何需要處理長文本理解、翻譯、摘要的企業級服務，背後幾乎都跑著基於 Transformer 的變體模型。"
+      ],
+      "related": [
+        "Self-Attention",
+        "BERT",
+        "GPT",
+        "Seq2seq"
+      ]
     },
     {
       "name": "Model Parameters",
@@ -201,15 +299,29 @@
     },
     {
       "name": "VAE",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "變分自編碼器 (Variational Autoencoder, VAE) 是一種強大的機率生成模型。它不只是像傳統 Autoencoder 將輸入資料壓縮成固定向量，而是會學習將資料壓縮成一個「機率分佈的參數（平均值與變異數）」，然後再從這個分佈中取樣出隨機潛在向量 (Latent Vector) 來解碼並重建原始資料。這使得它能在潛在空間 (Latent Space) 中平滑地插值並生成連續且多樣的新樣本。",
+      "use_cases": [
+        "早期在影像生成、風格轉換、或是遊戲開發中用來自動生成虛擬角色的新臉孔，甚至是藥物分子的生成模擬與異常檢測。"
+      ],
+      "related": [
+        "Autoencoder",
+        "Latent Space",
+        "KL Divergence",
+        "Generative Model"
+      ]
     },
     {
       "name": "RNN",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "循環神經網路 (Recurrent Neural Network, RNN) 是一類專門設計來處理序列資料 (Sequence Data，如文字、語音、股價) 的神經網路。它內建有「記憶機制」，也就是它在處理當前時間點的輸入資訊時，還會疊加把上一個時間點隱藏層 (Hidden Layer) 輸出的資訊一起考慮進來，使得模型能保留序列的前後文關係。",
+      "use_cases": [
+        "早期的機器翻譯、語音辨識、手寫字跡辨識以及股票價格走向預測等依賴時間軸特性的多數深度學習任務。"
+      ],
+      "related": [
+        "LSTM",
+        "Sequence Modeling",
+        "Vanishing Gradient",
+        "BPTT"
+      ]
     },
     {
       "name": "Vanishing Gradient",
@@ -228,9 +340,16 @@
     },
     {
       "name": "HMM",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "隱藏式馬可夫模型 (Hidden Markov Model, HMM) 是一個傳統的統計馬可夫模型。在模型中，系統被假設為一個由隱藏的狀態轉換而成，且這些看不見的狀態會根據特定機率分佈向外發射 (Emit) 可觀察到的符號。模型透過觀察這些外在符號序列，來逆向推測最可能的隱藏狀態序列 (如 Viterbi 演算法)。",
+      "use_cases": [
+        "在深度學習盛行以前，HMM 稱霸了早期的語音辨識領域 (將觀察到的聲音波形聲脈轉換為隱藏的字詞音素)，另外也大量應用於基因序列的比對與斷詞系統。"
+      ],
+      "related": [
+        "Markov Chain",
+        "Viterbi Algorithm",
+        "Speech Recognition",
+        "Sequence Output"
+      ]
     },
     {
       "name": "Deep Learning",
@@ -250,39 +369,81 @@
     },
     {
       "name": "GPT",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "生成型預訓練變換模型 (Generative Pre-trained Transformer, GPT) 是由 OpenAI 開發的一系列巨型語言模型架構。它使用了 Transformer 架構中的「解碼器 (Decoder)」部分。其核心精神是用海量的文本資料來進行『預測下一個字」的無監督單向預訓練，接著再透過少量的特定資料進行微調或使用 Prompt，來讓模型學會對話、翻譯和推理。",
+      "use_cases": [
+        "廣為人知的 ChatGPT 就是基於這個架構建立的，可作為企業內部知識庫客服、程式碼開發助手 (Copilot)、文案自動撰寫器。"
+      ],
+      "related": [
+        "Transformer",
+        "Autoregressive",
+        "LLM",
+        "Prompt Engineering"
+      ]
     },
     {
       "name": "GRU",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "閘門循環單元 (Gated Recurrent Unit, GRU) 是一種改良版的循環神經網路 (RNN)，用於解決標準 RNN 常見的梯度消失問題與長遠記憶無法保存的問題。它簡化了 LSTM 的設計，只有兩個閘門：「更新閘 (Update Gate)」和「重置閘 (Reset Gate)」，能在保持相近效能的同時大幅減少參數運算量。",
+      "use_cases": [
+        "對硬體資源有限（如手機端 AI 應用）但需要處理短至中等長度文本或是時間序列預測時，作為 LSTM 的輕量替代品。"
+      ],
+      "related": [
+        "RNN",
+        "LSTM",
+        "Vanishing Gradient",
+        "Time Series"
+      ]
     },
     {
       "name": "Autoregressive Model",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "自迴歸模型 (Autoregressive Model, AR Model) 是指一種利用過去的一系列自身觀察值（歷史數據）去預測當前或未來數值的統計模型。在自然語言處理領域中，它被特指為「文字的生成必須由左至右、依賴前面已經生成出來的字，來預測決定下一個字」的生成機制。",
+      "use_cases": [
+        "所有如 GPT 家族的語言模型，其底層文本生成方式皆為自迴歸。除了文字生成，也常用在氣象的時間序列預測（利用過去五天的氣溫預測明天氣溫）。"
+      ],
+      "related": [
+        "GPT",
+        "Time Series Forecasting",
+        "Text Generation",
+        "Decoder"
+      ]
     },
     {
       "name": "LSTM",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "長短期記憶網路 (Long Short-Term Memory, LSTM) 是為了解決傳統 RNN 無法有效學習「長距離相依性 (Long-Term Dependencies)」問題而被提出。它在網路細胞中加入了一條維持資訊流暢通的「細胞狀態 (Cell State)」輸送帶，並透過三個月臺匣門（遺忘閘、輸入閘、輸出閘）細緻地控制每次狀態更新要遺忘多少過去的資訊，以及加入多少當前新資訊。",
+      "use_cases": [
+        "處理複雜時間序列的首選，如早期 Google 翻譯、語音轉文字、智慧型手機鍵盤的自動校正與下一個字建議功能。"
+      ],
+      "related": [
+        "RNN",
+        "GRU",
+        "Vanishing Gradient",
+        "Memory Cell"
+      ]
     },
     {
       "name": "BERT",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "來自轉換器的雙向編碼器表徵量 (Bidirectional Encoder Representations from Transformers, BERT) 是由 Google 提出的里程碑式模型。有別於傳統由左至右單向閱讀文字，BERT 只使用了 Transformer 的「編碼器 (Encoder)」，使其能夠同步看見一個字語境的「上文與下文 (雙向)」。它透過「克漏字填空 (Masked LM)」與「下一句預測」任務進行預訓練，賦予字詞極其豐富的上下文語意特徵。",
+      "use_cases": [
+        "徹底改變了搜尋引擎演算法對用戶搜尋意圖的理解。非常適合那些不需要「連續生成」的任務，如文章情感分析、語意搜索比對、或抽取式問答。"
+      ],
+      "related": [
+        "Transformer",
+        "Encoder",
+        "Masked Language Modeling",
+        "NLU"
+      ]
     },
     {
       "name": "Diffusion Model",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "擴散模型 (Diffusion Model) 是近幾年主宰圖像生成領域的新興架構（如 Midjourney、Stable Diffusion）。其運作基於物理熱力學原理：先將一張清晰的圖片透過多步的人工地逐步「添加雜訊 (Forward Process)」，直到它完全成為無意義的躁點；接著再訓練神經網路學會「逆向去除雜訊 (Reverse Process)」，一步步從亂碼中重新還原出高品質、或是符合指定提詞 (Prompt) 條件的嶄新圖像。",
+      "use_cases": [
+        "目前所有的頂級 AI 繪圖工具皆採用此技術，可透過描述文字(Text-to-Image)產出高擬真照片、插畫、甚至是生成影音(Video Generation)。"
+      ],
+      "related": [
+        "Generative Model",
+        "Denoising",
+        "Stable Diffusion",
+        "Computer Vision"
+      ]
     },
     {
       "name": "ELMo",
@@ -301,9 +462,16 @@
     },
     {
       "name": "GAN",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "生成對抗網路 (Generative Adversarial Network, GAN) 由 Ian Goodfellow 於2014年提出。這是一種由「生成器 (Generator)」和「判別器 (Discriminator)」相互搏鬥而構成的模型。生成器負責偽造出極度逼真的假數據；判別器則負責像警察一樣鑑定數據是真實還是偽造的。透過這場「貓捉老鼠」互相提升的零和賽局，最終生成器就能產出足以以假亂真的資料。",
+      "use_cases": [
+        "主要應用在產生Deepfake人臉、老照片畫質修復與上色、動漫頭像自動生成、風格轉換 (如白天變黑夜)。"
+      ],
+      "related": [
+        "Generative Model",
+        "Discriminator",
+        "Generator",
+        "Deepfake"
+      ]
     },
     {
       "name": "Pooling",
@@ -322,29 +490,57 @@
     },
     {
       "name": "Elman Network",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "Elman Network（又稱簡單循環神經網絡 SRN）是早期循環神經網路 (RNN) 的一種基本型態。它的架構特點是在網路隱藏層外圍，加入了一個所謂的「上下文層 (Context Layer)」。這個上下文層會儲存並「回送」前一個時間步驟中隱藏層的狀態，來當作下一次輸入的一部份。這種將內部資訊再利用的設計，讓模型擁有了最初階的「記憶」能力。",
+      "use_cases": [
+        "為 LSTM 和現代 RNN 奠定了發展基礎。常用作學術界理解遞迴運算的範例，早期也被用於簡單的時間序列訊號處理(如預測特定波形)和基礎的文法結構學習。"
+      ],
+      "related": [
+        "RNN",
+        "Context Layer",
+        "Jordan Network",
+        "Sequence Data"
+      ]
     },
     {
       "name": "CNN",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "卷積神經網絡 (Convolutional Neural Network, CNN) 是一種專門處理具備網格拓樸結構資料（最典型為圖片中的像素網格）的深度學習架構。其核心是「卷積層 (Convolutional Layer)」，會利用多個小型的卷積核 (Filter / Kernel) 在整個輸入區域滑動並進行內積運算，從而擷取像是邊緣、紋理、形狀等局部空間特徵；加上「池化層 (Pooling)」用來縮小維度，使模型具備平移不變性 (Translation Invariance) 且大幅降低運算參數量。",
+      "use_cases": [
+        "電腦視覺界的第一霸主。廣泛應用於醫療 X 光片腫瘤辨識、自動駕駛系統的行人與車輛偵測、手機的相簿人臉自動分類、以及瑕疵品自動挑檢的工業 AI。"
+      ],
+      "related": [
+        "Convolution",
+        "Computer Vision",
+        "Pooling",
+        "Image Classification"
+      ]
     }
   ],
   "NLP": [
     {
       "name": "NLU",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "自然語言理解 (Natural Language Understanding, NLU) 是自然語言處理 (NLP) 的一個核心子領域，專門負責將人類模糊、不規則的自然語言「轉換為電腦能理解的結構化意義」。NLU 需處理意圖識別 (Intent Recognition)、實體擷取 (Entity Extraction) 與語意分析等任務。",
+      "use_cases": [
+        "客服聊天機器人 (Chatbots)、智慧語音助理（如 Siri, Alexa）。當你對 Siri 說「幫我設定明早八點的鬧鐘」，NLU 負責解析出意圖是「設鬧鐘」，時間實體為「明天早上 08:00」。"
+      ],
+      "related": [
+        "NLP",
+        "Intent Recognition",
+        "NER (Named Entity Recognition)",
+        "Semantics"
+      ]
     },
     {
       "name": "n-gram",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "N-gram 是一種在傳統 NLP 與計算語言學中用來將文本切分成多個連續字詞 (或字元) 組合的模型。「N」代表視窗大小，例如 Unigram 代表單個詞語出現的頻率；Bigram 代表連續兩個詞的組合 (如「機器 / 學習」)；Trigram 就是連續三個字詞的模式。利用 N-gram 統計，模型可以捕捉到局部的字詞搭配機率。",
+      "use_cases": [
+        "過去常應用於拼字檢查、關鍵字擷取以及早期的文字生成任務（手機鍵盤的下一個字預測）。也可做為訓練 TF-IDF 時的特徵擴充。"
+      ],
+      "related": [
+        "Language Model",
+        "Tokenization",
+        "TF-IDF",
+        "Bag of Words"
+      ]
     },
     {
       "name": "Text Preprocessing",
@@ -363,9 +559,16 @@
     },
     {
       "name": "Attention Mechanism",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "注意力機制 (Attention Mechanism) 是一種讓神經網路在處理龐大資訊時，能夠「學會聚焦於重要部分」的技術。在處理序列資料 (如一句話) 時，注意力機制會賦予不同字詞不同的權重，讓模型在預測當下目標詞時，能夠回頭關注輸入序列中最相關的上文資訊，進而解決長距離依賴的問題。",
+      "use_cases": [
+        "機器翻譯系統。例如將英文長句翻譯為中文時，注意力機制讓模型在輸出「蘋果」時，會強烈關注英文句中的「Apple」，而不是去關注無關的冠詞「The」。"
+      ],
+      "related": [
+        "Seq2seq",
+        "Transformer",
+        "Self-Attention",
+        "RNN"
+      ]
     },
     {
       "name": "NLP Overview",
@@ -385,113 +588,240 @@
     },
     {
       "name": "NLG",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "自然語言生成 (Natural Language Generation, NLG) 是 NLP 的另一個重要分支，與 NLU 相反，它負責「把電腦結構化的資料或內部的處理結果，轉換為人類能讀懂的自然語言」。現代的 NLG 多半藉由強大的深度學習模型來預測下一個字，以生成連貫且合乎語法的長篇文本。",
+      "use_cases": [
+        "自動撰寫財經新聞摘要、氣象播報文案、甚至是由 ChatGPT 生成的回覆內容、程式碼註解等，都是 NLG 的實際應用體現。"
+      ],
+      "related": [
+        "NLP",
+        "NLU",
+        "Text Generation",
+        "Transformers"
+      ]
     },
     {
       "name": "POS Tagging",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "詞性標記 (Part-Of-Speech Tagging, POS Tagging) 是 NLP 的一種基礎前處理任務，它的目標是將句子中的每一個字詞標註上對應的詞性，例如：名詞 (Noun)、動詞 (Verb)、形容詞 (Adjective) 或副詞等。這對解析句法結構非常關鍵。",
+      "use_cases": [
+        "用於輔助更高階的 NLP 任務，例如意見探勘 (Opinion Mining) 會特別關注文本中的形容詞；或是用來消除字詞歧義 (如「Apple」當名詞是蘋果，但「apple」在少數古語有不同用法，不同詞性代表不同語意)。"
+      ],
+      "related": [
+        "Syntax",
+        "Parsing",
+        "Tokenization",
+        "Dependency Parsing"
+      ]
     },
     {
       "name": "Multi-Head Self-Attention",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "多頭自注意力機制 (Multi-Head Self-Attention) 是 Transformer 架構的靈魂。相比於單一的注意力機制，它將自注意力演算拆分成多個不同的「頭 (Heads)」平行運作。每個頭負責關注輸入序列中不同面向的特徵 (例如有的頭專注於文法結構、有的專注於主被動關係)，最後再把這些學習到的不同表徵拼接起來送入下一層。",
+      "use_cases": [
+        "大型語言模型 (LLM) 如 GPT-4、BERT 的神經網路核心層。因為它允許模型具有更豐富的表徵能力，能同步解析同一句子的多層次語法與語意。"
+      ],
+      "related": [
+        "Transformer",
+        "Self-Attention",
+        "Scaled Dot-Product Attention",
+        "QKV (Query",
+        "Key",
+        "Value)"
+      ]
     },
     {
       "name": "Lemmatization",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "詞形還原 (Lemmatization) 是一種 NLP 的文本強正規化技術。它的目的是將帶有時態、單複數變化的單字，依據字詞的詞性與字典規則，標準化還原成它的「基本原形 (Lemma)」。例如將「running」還原為「run」，將「better」還原為「good」。這比暴力的字根提取 (Stemming) 來得更精準且合乎語言學。",
+      "use_cases": [
+        "用在開發高階的搜尋引擎與問答系統。當用戶搜尋「good hotels」時，系統因為詞形還原，也能成功比對並回傳包含「best hotel」的相關網頁文件。"
+      ],
+      "related": [
+        "Stemming",
+        "Text Normalization",
+        "Tokenization",
+        "WordNet"
+      ]
     },
     {
       "name": "Stemming",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "詞幹提取 (Stemming) 是將字詞後綴或是字尾直接移除的一種啟發式截斷方法，目的是將字詞縮減為「詞幹 (Stem)」。不同於 Lemmatization，Stemming 只是生硬地斬除常見的字尾，例如可能不管詞性直接把「automates」、「automatic」、「automation」全部去掉尾巴變成「automat」。雖然速度極快，但不一定會產出正確的單字原形。",
+      "use_cases": [
+        "早期需要極速建立大規模索引的搜尋引擎系統；或對精準度要求不高、但需要快速降低字彙量 (Vocabulary Size) 以進行情感分類的輕量級文本挖掘。"
+      ],
+      "related": [
+        "Lemmatization",
+        "Text Normalization",
+        "Porter Stemmer"
+      ]
     },
     {
       "name": "Stopword Removal",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "停用詞移除 (Stopword Removal) 是 NLP 的一種前處理步驟。停用詞泛指在語言中頻繁出現、但對於理解文本核心主題「無太多實際意義」的字詞，如英文的 a, the, is, on，或者是中文的 的、了、呢。模型在訓練前剔除這些字眼，能更專注於有實質意義的關鍵詞。",
+      "use_cases": [
+        "主要用在關鍵字提取 (Keyword Extraction)、主題建立與傳統文件分類。但在目前的深度學習語言模型 (如 BERT) 通常不移除停用詞，因為這些字可能蘊含了細微的語境或文法關聯。"
+      ],
+      "related": [
+        "BoW",
+        "TF-IDF",
+        "Text Preprocessing",
+        "NLP"
+      ]
     }
   ],
   "Eval Ops and Compliance": [
     {
       "name": "ROUGE_METEOR",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "ROUGE 與 METEOR 都是用於自動評估機器翻譯或文字摘要品質的指標。ROUGE（召回率導向指標）主要著重測量機器產出的摘要中，連續字詞 (N-gram) 涵蓋了多少人類標準答案中的字詞。METEOR 則更為複雜而精進，除了比對連續字詞，還額外考慮了詞幹(Stemming)還原、同義詞(Synonym)替換、以及語序罰分機制，更能反映譯文是否符合人類的真實語意。",
+      "use_cases": [
+        "在訓練及發布 NLP 模型 (如自動文件摘要系統、多國語言翻譯網站) 時，用來代替人工昂貴且主觀的評比，作為模型是否有進步的自動化計分依據。"
+      ],
+      "related": [
+        "BLEU",
+        "NLP Evaluation",
+        "Machine Translation",
+        "Text Summarization"
+      ]
     },
     {
       "name": "SLA",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "服務級別協定 (Service Level Agreement, SLA) 是一份由服務供應商與客戶之間簽署的正式合約。它將服務的各項具體標準與品質目標數據化並白紙黑字訂定，例如保證系統可用性要達到 99.9%、回應時間(Latency)在 200 毫秒內等。若未能達標，供應商通常需要給予客戶相對應的賠償或違約金。",
+      "use_cases": [
+        "企業導入雲端 LLM 服務 (如 Azure OpenAI) 時的關鍵採購考量。因為大型語言模型運作容易遇到系統擁擠，合約中的 SLA 會保證企業專案能穩定且不受影響地上線運作。"
+      ],
+      "related": [
+        "Availability",
+        "Downtime",
+        "Cloud Computing",
+        "QoS"
+      ]
     },
     {
       "name": "Confusion Matrix",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "混淆矩陣 (Confusion Matrix) 是一種將分類模型的預測結果可視化的矩陣表格。在二元分類中它是 2x2 的矩陣，包含了四個指標：真陽性 (TP)、偽陽性 (FP，誤報)、真陰性 (TN)、偽陰性 (FN，漏報)。透過這四個基礎數值的組合，科學家可以進一步計算出精確度 (Precision)、召回率 (Recall)、F1-Score 以及整體準確率 (Accuracy)。",
+      "use_cases": [
+        "所有的分類任務評估皆須仰賴混淆矩陣來得知模型「錯在哪裡」。例如在醫療快篩檢測上，若漏掉一個染病患者(FN)的代價極高，則團隊必須透過混淆矩陣來調教閾值，極力降低 FN 的發生。"
+      ],
+      "related": [
+        "Precision",
+        "Recall",
+        "F1 Score",
+        "Classification Evaluation"
+      ]
     },
     {
       "name": "Audit Log",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "稽核日誌 (Audit Log 或者 Audit Trail) 是一系列安全且不可竄改的數位記錄。它詳細記載了「誰在什麼時間點，對什麼系統或資料，進行了什麼樣的操作」，以及操作的最終結果 (成功或失敗)。對於 AI 系統而言，稽核日誌必須隨時掌握模型訓練數據的來源、變更歷程以及使用者對模型的提問行為。",
+      "use_cases": [
+        "企業資訊安全與法規遵循的重點（例如 HIPAA、GDPR 等規範）。當系統發生資安事件或者決策模型引發爭議時，資安鑑識人員就可以透過調閱 Audit Log 查到問題的源頭。"
+      ],
+      "related": [
+        "Compliance",
+        "Security",
+        "Logging",
+        "Access Control"
+      ]
     },
     {
       "name": "Benchmark",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "基準測試 (Benchmark) 是指在相同的標準化評估標準、資料集、與環境設定下，用來衡量評估硬體、軟體或是 AI 模型各項效能（如計算速度、準確度、耗能大小）的測試程序。這確保了不同世代、不同廠商的產品與模型能在同一個客觀天秤上互相比較高低。",
+      "use_cases": [
+        "評估新一代 AI 晶片的算力到底比前一代快多少，或是使用公開的 Benchmark 題庫 (例如測試邏輯理解的 MMLU、測試數學能力的 GSM8K) 來判斷新發布的開源語言模型（如 Llama 3）是否有擊敗競爭對手（如 GPT-4）。"
+      ],
+      "related": [
+        "Evaluation",
+        "Metrics",
+        "Performance Testing",
+        "Baseline"
+      ]
     },
     {
       "name": "Zero Trust",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "零信任架構 (Zero Trust Architecture) 是一種顛覆傳統「內網安全」概念的資安模型。它的核心理念為「永遠不信任，始終要驗證 (Never Trust, Always Verify)」。無論請求來自於企業外部還是已經連入內部網路的終端設備，系統都會假設網路環境已經被入侵，因此針對每一個資料存取行為，都必須進行嚴格的身分認證、並落實「最小權限原則」。",
+      "use_cases": [
+        "防範內部資料洩漏，特別是企業建立專屬私有 LLM 知識庫時，必須防止一位只擁有研發部權限的員工，透過 prompt injection 的手段偷問知識庫去存取不屬於他層級的財務機密檔案。這時就必須從基礎網路架構實行身分驗證。"
+      ],
+      "related": [
+        "Cybersecurity",
+        "Authentication",
+        "Least Privilege",
+        "IAM"
+      ]
     },
     {
       "name": "Metadata",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "詮釋資料或元數據 (Metadata) 簡言之就是「關於資料的資料 (Data about data)」。它被設計用來描述資料背後的關聯資訊以方便管理與檢索。例如，一張數位照片本身是資料，但記錄在照片檔案內的拍攝日期、相機機型、GPS 座標及光圈大小等，就是它的 Metadata。",
+      "use_cases": [
+        "在 RAG (檢索增強生成) 系統架構中非常關鍵。為了避免 AI 在大海撈針中找錯向量知識，每份切片(Chunks) 上都會貼上如「部門來源、創建時間、標籤」等 Metadata。使用者提問時，系統可先針對 Metadata 進行硬性過濾（如限定只搜『今年度』文件），再進行向量相似度搜尋。"
+      ],
+      "related": [
+        "Data Management",
+        "RAG",
+        "Vector Database",
+        "Data Labeling"
+      ]
     },
     {
       "name": "Data Drift",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "資料漂移 (Data Drift / Covariate Shift) 指的是當模型實際上線運作後，真實世界產生的「輸入資料分佈特徵」與當初用來訓練模型的「歷史資料分佈」產生了顯著的偏離。這是一種模型退化(Model Decay)的現象，當輸入的基礎發生了變化，即使模型演算法沒有改，其預測的準確度也會隨之崩盤與崩潰。",
+      "use_cases": [
+        "在電商推薦系統中，可能發生消費者品味突然改變；或是房價預測模型在上線半年後遇到了不可預期的經濟泡沫，導致真實房市數據(輸入)與半年前的歷史訓練數據脫節。這時 MLOps 團隊就需監控 Data Drift 並即時重新訓練微調模型。"
+      ],
+      "related": [
+        "Model Decay",
+        "Concept Drift",
+        "MLOps",
+        "Machine Learning Lifecycle"
+      ]
     },
     {
       "name": "MaaS",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "模型即服務 (Model as a Service, MaaS) 是一種雲端運算的商業模式。平台供應商(如 OpenAI, AWS, Google Cloud) 把超級龐大、訓練並維護成本極高的基礎語言/圖片生成模型部署在雲端，然後開放各項 API 網路接口供大眾遠端調用，開發者不需再煩惱去買顯示卡或者架設昂貴的基建。",
+      "use_cases": [
+        "各種依靠 API 呼叫 ChatGPT 的第三方中小型應用服務。例如建立一個線上自動生成履歷的網站，網站本身不用具備任何 AI 運行環境，只需按用量將使用者的資訊透過 API 送給 MaaS 供應商處理，再將結果顯示給使用者。"
+      ],
+      "related": [
+        "API",
+        "Cloud Computing",
+        "SaaS",
+        "Foundation Models"
+      ]
     },
     {
       "name": "ETL",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "提取轉換加載 (Extract, Transform, Load, ETL) 是一個將散佈各處的資料彙整起來的標準化流程整合技術。首先從各種不同的資料來源 (例如各分店的不同資料庫資料庫、網頁日誌) 「提取」出原生資料；接著進行「轉換」，包含過濾亂碼、統一日期格式、將匯率標準化等清理動作；最終「載入」到資料倉儲 (Data Warehouse) 內供未來的分析使用。",
+      "use_cases": [
+        "大數據分析與 AI 模型準備訓練語料庫之前不可或缺的第一步，用以確保餵入模型的資料都是乾淨且標準化的。"
+      ],
+      "related": [
+        "Data Pipeline",
+        "Data Warehouse",
+        "Data Cleaning",
+        "Data Transformation"
+      ]
     },
     {
       "name": "MMLU",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "大規模多任務語言理解評估基準 (Massive Multitask Language Understanding, MMLU) 是近兩年最重要且廣泛被採用的 LLM 評估標準題庫。它包含了從 STEM(理工)、人文學科、醫學、法律到日常常識等 57 個不同領域的多選題測驗，涵蓋從初級到極專業的大量問題。用來測量大型語言模型是否具備像人類一般的跨領域真實世界知識深度。",
+      "use_cases": [
+        "模型研發者發布新模型（如 Llama 3 比較 Llama 2）時的火力展示場。若一個模型能在 MMLU 上拿到高分（例如超越 80% 到 90% 區間），代表此模型不只會「聊天」，更具有解決高度複雜且專業問題的能力。"
+      ],
+      "related": [
+        "Evaluating LLMs",
+        "Benchmark",
+        "Reasoning",
+        "Knowledge Retrieval"
+      ]
     },
     {
       "name": "MLOps_LLMOps",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "MLOps (Machine Learning Operations) 是一套結合開發(Dev)和維運(Ops)的文化和實踐法，旨在為機器學習生命週期建立起「自動化且穩定」的標準流水線（包含數據收集、模型追蹤、自動化測試、一鍵佈署與效能監控）。而衍生出的 LLMOps (大型語言模型維運) 則是特別針對維護龐大 LLM 的工具鏈，包含追蹤 Prompt 版本、處理微調成本、與監控模型是否產生幻覺。",
+      "use_cases": [
+        "幫助數據科學家和工程團隊擺脫將模型只放在自己筆電跑的困境。透過 MLOps 架構，當收集到新的數據漂移訊號時，系統會自動觸發腳本在背景重訓，並在隔離區測試通過後自動推上線，從而確保 AI 產品品質的一致性。"
+      ],
+      "related": [
+        "DevOps",
+        "CI/CD",
+        "Model Deployment",
+        "Model Monitoring"
+      ]
     },
     {
       "name": "CRM",
@@ -510,29 +840,57 @@
     },
     {
       "name": "GDPR",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "通用資料保護規則 (General Data Protection Regulation, GDPR) 是由歐盟在2018年實施，被譽為全球最嚴格的隱私與安全保護法。規範企業在收集或處理歐盟民眾個資時，必須得到非常明確的同意，並且民眾擁有「被遺忘權」與「資料可攜權」。即使公司不在歐洲，只要處理歐盟公民資料就受其管轄。",
+      "use_cases": [
+        "在訓練生成式 AI 與建置 RAG 系統時必須確保避開敏感用戶個資。若機器人生成了含特定國外用戶可識別身分的資訊，或是拒絕刪除該用戶被訓練進模型裡的資料，企業可能面臨高達全球年營收 4% 的毀滅性天價罰單。"
+      ],
+      "related": [
+        "Data Privacy",
+        "Compliance",
+        "PII",
+        "Data Protection"
+      ]
     }
   ],
   "Infrastructure": [
     {
       "name": "TPU",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "張量處理單元 (Tensor Processing Unit, TPU) 是 Google 專為加速機器學習與類神經網路運算而客製化設計的特定應用積體電路 (ASIC)。相對於 GPU 通用的平行運算架構，TPU 高度特化於執行深層卷積神經網絡中巨量的「矩陣乘法」與加法運算，其內部配備了矩陣乘法單元 (MXU)，能達成極高的吞吐量，並顯著降低運算的能耗。",
+      "use_cases": [
+        "用於需要訓練巨型語言模型或是處理海量資料深層學習任務的企業級應用。例如 Google 內部的搜尋引擎演算法訓練、Gemini 模型訓練皆依賴 TPU 叢集，開發者也可透過 Google Cloud 租用 TPU 進行加速。"
+      ],
+      "related": [
+        "ASIC",
+        "GPU",
+        "Matrix Multiplication",
+        "TensorFlow"
+      ]
     },
     {
       "name": "GPU",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "圖形處理單元 (Graphics Processing Unit, GPU) 原本是為了負責處理電腦螢幕上的 3D 圖形與視訊渲染而誕生。但因為其內部擁有上千到上萬個計算核心，極度適合執行「高度平行的單純數學運算」，因此被廣泛跨界挪用來做深度學習的神經網絡訓練與推論運算。",
+      "use_cases": [
+        "從個人的遊戲電腦、本機端 AI 模型微調，到伺服器農場的 AI 模型訓練全都有賴它。主流的 NVIDIA A100/H100 GPU 正在全球資料中心日以繼夜地提供 ChatGPT 等 AI 應用的背景算力支援。"
+      ],
+      "related": [
+        "CUDA",
+        "Parallel Computing",
+        "NVIDIA",
+        "Deep Learning"
+      ]
     },
     {
       "name": "NPU",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "神經處理單元 (Neural Processing Unit, NPU) 是專門為了在裝置端高效執行人工智慧運算而設計的處理晶片（或SoC中的一個區塊）。不同於龐大耗電的 GPU，NPU 追求在行動裝置或邊緣設備上，以極低的功耗快速執行神經網路推論任務。",
+      "use_cases": [
+        "大量搭載於現代的「AI 手機」及「AI PC」處理器之中。當你在手機上使用即時的人臉辨識解鎖、相機的景深強化、或是設備端的語音轉文字時，背後的計算通常就是交給 NPU 瞬間完成的。"
+      ],
+      "related": [
+        "Edge AI",
+        "SoC",
+        "Inference",
+        "Low Power"
+      ]
     }
   ],
   "GenAI and LLM": [
@@ -552,21 +910,42 @@
     },
     {
       "name": "LRM",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "大型推理模型 (Large Reasoning Model, LRM) 指的是專門強化「邏輯推導與複雜思考」的大型語言模型變體（如 OpenAI 的 o1 模型）。不同於強調廣泛知識或文字生成多樣性的傳統 LLM，LRM 內建了思維鏈 (Chain-of-Thought) 的演算法機制，在給出最終答案前，會自動將問題分解成細微步驟，花費更多運算時間 (Test-time Compute) 在內部自我驗證、反思與除錯。",
+      "use_cases": [
+        "專注於解決高度複雜且需要多步驟嚴謹證明的任務，例如高階程式碼重構、高等數學證明題、以及藥物分子的設計推理等。這類模型雖然「思考」較慢，但對於數理邏輯考驗的精確度卻能超越傳統 LLM。"
+      ],
+      "related": [
+        "Chain-of-Thought",
+        "LLM",
+        "Reasoning",
+        "OpenAI o1"
+      ]
     },
     {
       "name": "RAG",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "檢索增強生成 (Retrieval-Augmented Generation, RAG) 是一種結合了「知識搜尋」與「文本生成」的混合型 AI 應用架構。為了彌補通用大型語言模型(LLM) 無法內建企業私密知識的缺陷，或是容易發生幻覺(Hallucination)，RAG 系統會在把問題與 Prompt 丟給 LLM「生成」答案之前，先去額外的外部資料庫（例如向量資料庫）中「檢索」出最相關的文件片段放入 Prompt 中當作「開卷考」的參考資料。如此可以確保 AI 回答更具時效性且立基於真實事證上。",
+      "use_cases": [
+        "企業內部的專屬知識庫客服系統：它可以讀取數萬份不公開的公司 PDF 財報或內部法務規定，然後針對員工的問題給出精準答覆並附上出處。"
+      ],
+      "related": [
+        "Vector Database",
+        "Hallucination",
+        "Prompt Engineering",
+        "Semantic Search"
+      ]
     },
     {
       "name": "KAG",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "知識增強生成 (Knowledge-Augmented Generation, KAG) 是一個廣義的概念，亦可視為知識圖譜輔助生成 (Knowledge Graph-Augmented Generation)。它是 RAG 的一種進階演化型態，主要差異在於 KAG 利用了結構化且有邏輯關係的「知識圖譜 (Knowledge Graph)」而不是單純的非結構化文字切片。透過知識圖譜中實體(Entity)與關係(Relation)的鏈結，將強烈的邏輯關聯性餵給 LLM 以提升回答品質。",
+      "use_cases": [
+        "醫療問答與診斷系統。因為醫學名詞如「症狀」、「疾病」、「藥物」間具備嚴格且複雜的關聯網絡，使用知識圖譜增強可以避免 RAG 經常遇到「相似文字段落很多但不具備邏輯關聯」的盲點。"
+      ],
+      "related": [
+        "Knowledge Graph",
+        "RAG",
+        "Ontology",
+        "Hallucination"
+      ]
     },
     {
       "name": "LLM Overview",
@@ -587,9 +966,16 @@
     },
     {
       "name": "Word2Vec_GloVe_FastText",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "Word2Vec, GloVe 與 FastText 都是代表性的「詞嵌入 (Word Embedding)」技術演算法模型。它們的核心任務都是把人類的自然語言單字轉換（投射）成電腦可理解的多維度數學「向量 (Vector)」。",
+      "use_cases": [
+        "前 Transformer 時代自然語言處理的標準第一步。透過這些技術，電腦甚至可以做文字的數學運算，例如經典的：`King - Man + Woman = Queen`。"
+      ],
+      "related": [
+        "Word Embedding",
+        "NLP",
+        "Vector Space",
+        "CBOW"
+      ]
     },
     {
       "name": "Generative AI",
@@ -609,9 +995,16 @@
     },
     {
       "name": "LoRA",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "低秩自適應微調技術 (Low-Rank Adaptation, LoRA) 是由微軟提出的一種極致高效的參數效率微調 (PEFT) 演算法。傳統上，若要微調擁有上千億參數的 LLM 需要極大的算力。LoRA 運用了數學線性代數的「低維度矩陣」概念，在原本神經網路龐大且凍結不變的權重(Weights)旁，外掛上兩個極小的低維矩陣 (Rank) 來間接模擬學習變化。這能讓訓練所需的參數數量縮減 10,000 倍以上，同時保持幾乎相同的模型效能。",
+      "use_cases": [
+        "一般開發者與開源社群最常使用的 LLM 微調方式（如使用在 Llama 3 或 Stable Diffusion 的特化訓練）。例如：只用一張消費級顯示卡，在一小時內將通用的繪圖模型微調出專門畫「特定動漫角色」的新模型。"
+      ],
+      "related": [
+        "PEFT",
+        "Fine-tuning",
+        "LLM",
+        "Transformer"
+      ]
     },
     {
       "name": "Open vs Closed Source",
@@ -630,21 +1023,42 @@
     },
     {
       "name": "Embedding",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "嵌入式表徵 (Embedding) 是深度學習的一種降維轉換技術。它是把任何高維度、稀疏、且非數值形式的實體（如文字、圖片、甚至是使用者偏好），轉換成「低維度、密集且連續的固定長度數值型向量 (Vector)」。最神奇的是，在這個向量空間裡，物理距離（如餘弦相似度）相近的向量，在現實維度中的意義或屬性就會是高度相關的。",
+      "use_cases": [
+        "現今所有 AI 搜尋引擎與推薦系統的核心。像 YouTube 推薦影片時，就是把你過去的「觀看紀錄 Embedding」與「影片的標籤 Embedding」做內積計算相似度，從百萬部影片池篩選出最靠近你偏好的內容。"
+      ],
+      "related": [
+        "Word2Vec",
+        "Cosine Similarity",
+        "Vector Database",
+        "Dimensionality Reduction"
+      ]
     },
     {
       "name": "Pre-training",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "預訓練 (Pre-training) 指的是深度學習模型在進行特定的專項學習（微調）之前，所經歷的「基礎通識教育」階段。研發者會耗費海量的算力，將兆級別的未標註互聯網資料（網頁、維基百科、書籍），利用無監督學習機制（例如預測下一個字或填空）讓擁有千億參數的空白神經網路盡可能廣泛地吸收人類語言的語法結構與世界常識。",
+      "use_cases": [
+        "製造出如 GPT-3 / GPT-4 等「基礎模型 (Foundation Model)」。預訓練結束後的模型擁有了對人類世界的廣泛理解，只要後續配合少量特定領域資料來「微調 (Fine-tuning)」，便能輕易地勝任如法律諮詢等專家工作。"
+      ],
+      "related": [
+        "Foundation Model",
+        "Fine-tuning",
+        "Transformer",
+        "Unsupervised Learning"
+      ]
     },
     {
       "name": "CAG",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "快取增強生成 (Cache-Augmented Generation, CAG) 是一種新興的 LLM 推理最佳化技術設計。隨著大型語言模型支援的上下文視窗 (Context Window) 變得極大，每次處理長達十萬的提詞會極度吃資源。CAG 取代了傳統 RAG 把大量外部切片資料「塞進問題去問」的時間消耗，它事先對海量擴充文件預先算出並長期保存 KV Cache (Key-Value Cache)。當使用者問問題時，LLM 就不需重新閱讀文件，直接「套用」快取過的記憶狀態來進行推理生成。大語言模型藉此實現超長文本的無延遲回應。",
+      "use_cases": [
+        "特別適合在「知識庫內容變動不大，且文件極度冗長」的情境下替換 RAG。例如律師事務所可以事先把某大財團幾百頁的歷年財報全部利用 CAG 讀取成快取，之後所有律師詢問財報相關內容的回應速度將會大幅躍升，且不需要向量資料庫的檢索動作。"
+      ],
+      "related": [
+        "KV Cache",
+        "RAG",
+        "Context Window",
+        "LLM Inference"
+      ]
     },
     {
       "name": "Contextualized Word Embeddings",
@@ -663,27 +1077,55 @@
     },
     {
       "name": "Chunking",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "切塊或分塊 (Chunking) 是一種前置的資料處理技術。由於 LLM 與嵌入向量模型 (Embedding Models) 有長度限制（如 512 或 8192 個 Token），我們無法直接將整本上百頁的 PDF 書籍塞給模型運算。Chunking 的目的就是把長篇文章依據固定字數限制（例如每 500 字一塊）、重疊字數（Overlap）、或者是按照文章自然的段落標題或標點符號進行「合理地切割成多個碎片」，確保每一小節保有完整的最小語意。",
+      "use_cases": [
+        "建置 RAG（檢索增強生成）系統的第一道重要工序。切塊切得好，後續的向量搜尋(Semantic Search)才能準確找到使用者需要的知識；若切得太小或切斷了因果關係句子，會直接導致 RAG 查詢失敗。"
+      ],
+      "related": [
+        "RAG",
+        "Tokenization",
+        "Vector Database",
+        "Data Pipeline"
+      ]
     },
     {
       "name": "Fine-tuning",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "微調 (Fine-tuning) 是一種「站在巨人肩膀上」的訓練策略。相較於從零開始訓練（這叫預訓練 Pre-training），微調是拿一個已經受過基礎通識教育的大型模型（例如已經會對話的 Llama 3），然後再餵給它相對小量、高質量且專屬於特定領域的資料進行輕度訓練與權重調整，讓它成為「某個領域的專家」或符合特定的回覆口吻語氣。",
+      "use_cases": [
+        "醫療問診機器人：我們不會從零訓練一個醫療語言模型，而是拿開源基礎模型，再用數以萬筆的真實「病患主訴與醫生診斷對話紀錄」對模型進行微調，讓它學會像專業權威醫生一樣精準提問與下判斷。"
+      ],
+      "related": [
+        "Transfer Learning",
+        "Pre-training",
+        "LoRA",
+        "Domain Adaptation"
+      ]
     },
     {
       "name": "Tokenization",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "標記化 / 斷詞 (Tokenization) 是自然語言處理中將文本資料「數位化翻譯給電腦看」最源頭的步驟。因為神經網路只懂數字，它會把一個句子拆解成最小單位 Token（可能是單純的一個詞、半個詞、或是中文字元），然後對應到一個專屬的數字 ID。不同的模型採用了不同的切分演算法(例如 BPE 或 WordPiece)，這也是為何一段中文字，ChatGPT 與 Claude 消耗的 Token 數量會不一樣的原因。",
+      "use_cases": [
+        "任何與 LLM 相關的對話串。開發者在計算 OpenAI API 耗費成本時，就是以 Token 數量為計價標準。另外，如果模型對繁體中文的 Tokenization 切片不佳，很容易造成模型理解錯誤與出現亂碼幻覺。"
+      ],
+      "related": [
+        "BPE (Byte Pair Encoding)",
+        "Vocabulary",
+        "WordPiece",
+        "NLP"
+      ]
     },
     {
       "name": "Prompt Engineering",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "提示詞工程 (Prompt Engineering) 指的是如何透過精心設計指令與提供上下文範例，來引導並最大化激發出生成式 AI 語言模型的表現潛能。這包含了了解模型的運作特性，並套用不同的系統性溝通框架 (如 Few-shot Prompting 提供少量範例、Chain-of-Thought 要求列出思考過程) 來強制約束模型不產生幻覺並產出精確格式。",
+      "use_cases": [
+        "現代開發者必備技能。比如從傳統簡單地要求 `幫我寫一個網頁`，轉化成 `你現在是一位擁有 10 年資歷的資深前端工程師(角色設定)。請幫我撰寫以下規格的 React 元件...並以 JSON 格式輸出(約束輸出)`，以獲得能直接投入生產線的可靠成果。"
+      ],
+      "related": [
+        "Chain-of-Thought",
+        "Few-shot",
+        "LLM",
+        "Prompt Injection"
+      ]
     },
     {
       "name": "Model Sizes (7B, 70B)",
@@ -702,21 +1144,42 @@
     },
     {
       "name": "Temperature",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "溫度參數 (Temperature) 是生成式語言模型中的一個關鍵超參數 (Hyperparameter)，用來控制模型輸出的「隨機性與創造力」。背後原理是在計算預測下一個字詞的機率分佈時，用以放大或縮小各個字詞之間的差異。Temperature 範圍通常在 0 到 1 或 2 之間設定。",
+      "use_cases": [
+        "針對不同任務調整參數：若要求 AI 撰寫行銷文案或想點子，Temperature 應設在 0.7~0.9；若要求 AI 進行嚴謹的數學推算或是歸納歷史財報，則應該設為 0 以保證事實正確度。"
+      ],
+      "related": [
+        "Top-K",
+        "Top-P",
+        "Hallucination",
+        "Generative AI"
+      ]
     },
     {
       "name": "Top-K_Top-P Sampling",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "Top-K 與 Top-P (又稱 Nucleus Sampling) 是兩種控制 LLM 生成多樣性與抑制幻覺的採樣策略。它們與 Temperature 共同運作以「縮小下一個詞的選擇範圍」：",
+      "use_cases": [
+        "對話機器人引擎研發與開源模型推論。為了讓 AI 的對話不死板同時又不會突然崩潰亂回答，工程師常同時設定 Temperature=0.7 並且 Top-P=0.9 搭配組合去限制輸出的分佈範圍。"
+      ],
+      "related": [
+        "Temperature",
+        "Decoding Strategy",
+        "LLM Inference",
+        "Softmax"
+      ]
     },
     {
       "name": "Multimodal",
-      "concept": "目前尚無解釋",
-      "use_cases": [],
-      "related": []
+      "concept": "多模態 (Multimodal) 是當前最強大 AI 模型的核心特質，指的是模型被設計為能夠同時感官並處理「多種不同類型的數據來源」，通常跨足了：文字、聲音、圖像/影像。有別於傳統只能「看圖」或只懂「打字」的專家模型，多模態模型將所有的異質資訊都映射到了同一個巨大的高維特徵向量空間中，產生極為強大的跨域理解能力。",
+      "use_cases": [
+        "最典型的例子是 GPT-4o 與 Gemini 1.5 Pro。使用者可以直接開啟相機拍攝冰箱裡面的食材(影像模態)與收據標籤，並用嘴巴講述(聲音模態)「我不喜歡吃洋蔥」，請模型給出晚餐的烹飪建議菜單(文字模態)。"
+      ],
+      "related": [
+        "GPT-4o",
+        "Vision-Language Model (VLM)",
+        "Cross-Modal",
+        "Gemini"
+      ]
     }
   ]
 }
